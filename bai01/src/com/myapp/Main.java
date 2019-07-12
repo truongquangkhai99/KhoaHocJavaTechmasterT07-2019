@@ -8,6 +8,11 @@ public class Main {
         System.out.println("Tong = "+sum);
         System.out.println(" 10 -5 ="+Calculation.minus2Numbers(10.0, 5.0));
         Calculation.doSomething();
+        float f = 1.000000000000f / (float)1.000000000000;
+        System.out.println(f!=f);
+        Calculation.convertCurrency();
+        
+
     }
 
 }
