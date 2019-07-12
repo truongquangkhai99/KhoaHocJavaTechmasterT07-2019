@@ -25,4 +25,14 @@ public class Calculation {
         }
         System.out.println("Number of evens = "+numberOfEven);
     }
+    public static void convertCurrency() {
+
+        String input = "12345678";
+        String x = String.format("%,d", Integer.valueOf(input));
+        String y = x.replace(',','.');
+        String output = y+" VND";
+        System.out.println("Result is: ");
+        System.out.println(output);
+
+    }
 }
