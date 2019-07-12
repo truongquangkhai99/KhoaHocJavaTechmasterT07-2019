@@ -1,5 +1,8 @@
 package com.myapp;
 
+import java.util.Scanner;
+import java.util.function.Function;
+
 public class Calculation {
     public static Double getY(Double x) {
         Double y = (Math.pow(x, 3) + 1) / (Math.pow(x, 2) + 2);
@@ -34,12 +37,18 @@ public class Calculation {
         String [] outputNames = new String[8];
         Integer currentPosition = 0;
         //i = iterate
+        String firstCharacter = "";
         for(int i = 0; i < names.length; i++) {
-            String firstCharacter = String.valueOf(names[i].charAt(0));
-            //System.out.println("names[i] = "+names[i]);
-            outputNames[currentPosition] = firstCharacter;
-            outputNames[++currentPosition] = names[i];
+            if(!String.valueOf(names[i].charAt(0)).equals(firstCharacter)) {
+                firstCharacter = String.valueOf(names[i].charAt(0));
+                outputNames[currentPosition] = firstCharacter;
+                outputNames[++currentPosition] = names[i];
+
+            } else {
+                outputNames[currentPosition] = names[i];
+            }
             currentPosition++;
+
         }
         System.out.println("dddd");
         for(int i = 0; i < outputNames.length; i++) {
@@ -66,6 +75,8 @@ public class Calculation {
         long t2 = System.nanoTime();
         System.out.println("time period = "+((double)(t2-t1))/Math.pow(10,9));
         float f = (float)System.nanoTime();
-        System.out.println(f!=f);
+
+
+        System.out.println(f != f);
     }
 }
