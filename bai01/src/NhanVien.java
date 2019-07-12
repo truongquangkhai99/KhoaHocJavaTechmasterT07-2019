@@ -1,14 +1,18 @@
 public class NhanVien {
     private String tenNhanVien;
-    private double luongCoban;
+    private Double luongCoban;
     private double hesoluong;
     public static double LUONG_MAX = 10000;
     public Boolean tangluong(double increase) {
-        if(hesoluong*(luongCoban + increase) < LUONG_MAX) {
-            luongCoban += increase;
+        double hesoluongMoi = hesoluong + increase;
+        double luongmoi = luongCoban * hesoluongMoi;
+        if(luongmoi < LUONG_MAX) {
+            hesoluong = hesoluongMoi;
             return true;
+        } else {
+            System.out.println("Ko the tang luong");
+            return false;
         }
-        return false;
     }
     public double tinhluong() {
         return luongCoban * hesoluong;
