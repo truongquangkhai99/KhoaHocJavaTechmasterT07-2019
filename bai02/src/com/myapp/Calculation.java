@@ -14,7 +14,7 @@ public class Calculation {
             for(int j = i + 1; j < inputStrings.length; j++) {
                 if(inputStrings[i].compareTo(inputStrings[j]) > 0) {
                     //swap
-                    String strTemp = inputStrings[i];
+                    String strTemp = inputStrings[i];//reference = pointer
                     inputStrings[i] = inputStrings[j];
                     inputStrings[j] = strTemp;
                 }
@@ -27,6 +27,7 @@ public class Calculation {
 
         return inputStrings;
     }
+
     public static void doSomething() {
         String [] names = {"Hoang", "Vinh", "Hung", "An"}; //array != "collection, list"
         names = sortStrings(names);
@@ -49,5 +50,22 @@ public class Calculation {
             }
 
         }
+    }
+    public static void doSomething2() {
+        //Calculate time period
+        Double x = 3.2;
+        Double y = 0.0;
+        //Get current Timestamp
+        long t1 = System.nanoTime();
+        int i = 0;
+        while (i < 1000000) {
+            y = Math.pow(x, 20) + x + 100;
+            i++;
+        }
+
+        long t2 = System.nanoTime();
+        System.out.println("time period = "+((double)(t2-t1))/Math.pow(10,9));
+        float f = (float)System.nanoTime();
+        System.out.println(f!=f);
     }
 }
