@@ -74,7 +74,7 @@ public class Calculation {
 
         long t2 = System.nanoTime();
         System.out.println("time period = "+((double)(t2-t1))/Math.pow(10,9));
-        float f = (float)System.nanoTime();
+        float f = new Integer((int)System.nanoTime());
 
 
         System.out.println(f != f);
