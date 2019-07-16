@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f373efb5-9562-43f1-950f-c22bbea1adb5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NhanVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/myapp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/myapp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excercises/bus_management.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../excercises/bus_management.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excercises/~$s_management.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../excercises/~$s_management.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excercises/~$s_ticket_management.docx" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,27 +19,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/myapp/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NhanVien.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="667">
               <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding>
+                <element signature="e#554#555#0" expanded="true" />
                 <element signature="e#599#600#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
                 <element signature="e#903#904#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
                 <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="e#1040#1041#0" expanded="true" />
                 <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="e#1125#1126#0" expanded="true" />
                 <element signature="e#1169#1170#0" expanded="true" />
+                <element signature="e#1205#1206#0" expanded="true" />
                 <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1287#1288#0" expanded="true" />
                 <element signature="e#1329#1330#0" expanded="true" />
               </folding>
             </state>
@@ -72,8 +73,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/myapp/Calculation.java" />
-        <option value="$PROJECT_DIR$/src/com/myapp/Main.java" />
         <option value="$PROJECT_DIR$/src/NhanVien.java" />
+        <option value="$PROJECT_DIR$/src/com/myapp/Main.java" />
       </list>
     </option>
   </component>
@@ -91,6 +92,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,7 +121,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,7 +180,7 @@
     <frame x="0" y="23" width="2560" height="1376" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.149722" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15091342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -214,13 +215,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/myapp/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myapp/Calculation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="899">
@@ -232,17 +226,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/Float.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-804">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myapp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NhanVien.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding>
+            <element signature="e#554#555#0" expanded="true" />
             <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
             <element signature="e#903#904#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
             <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1040#1041#0" expanded="true" />
             <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
             <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
             <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
             <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>

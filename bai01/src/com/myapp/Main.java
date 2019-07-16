@@ -1,5 +1,7 @@
 package com.myapp;
 
+import static java.lang.Float.NaN;
+
 public class Main {
     public static  void main(String [] args) {
         //args = arguments
@@ -8,7 +10,7 @@ public class Main {
         System.out.println("Tong = "+sum);
         System.out.println(" 10 -5 ="+Calculation.minus2Numbers(10.0, 5.0));
         Calculation.doSomething();
-        float f = 1.000000000000f / (float)1.000000000000;
+        float f = NaN;
         System.out.println(f!=f);
         Calculation.convertCurrency();
         
