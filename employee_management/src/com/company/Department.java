@@ -1,12 +1,23 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Department {
     private String departmentId, name, description;
+    private ArrayList<Employee> employees = new ArrayList<Employee>();
 
     Department(String departmentId, String name, String description) {
         this.departmentId = departmentId;
         this.name = name;
         this.description = description;
+    }
+
+    public ArrayList<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(ArrayList<Employee> employees) {
+        this.employees = employees;
     }
 
     public String getDepartmentId() {

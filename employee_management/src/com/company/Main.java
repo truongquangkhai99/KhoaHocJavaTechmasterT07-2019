@@ -23,6 +23,7 @@ public class Main {
                 18, "anna@gmail.com","0111111");
         Employee mrHoang = new Employee("Hoang", 30,
                 "hoang", "5555555");
+
         Department itDepartment = new Department("1",
                 "phong IT", "chuyen cai dat may");
         Department salesDepartment = new Department("2",

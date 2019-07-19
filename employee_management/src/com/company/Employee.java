@@ -1,6 +1,11 @@
 package com.company;
 
 public class Employee {
+    private String name = "";
+    private Integer age = 18;
+    private String email = "";
+    private String phoneNumber;
+    private Department department;
 
     //constructor = ham khoi tao = ham tao
     Employee(String name, Integer age, String email, String phoneNumber) {
@@ -9,10 +14,15 @@ public class Employee {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
-    private String name = "";
-    private Integer age = 18;
-    private String email = "";
-    private String phoneNumber;
+
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 
     //setter
     public void setName(String name){
