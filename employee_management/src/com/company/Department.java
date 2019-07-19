@@ -15,7 +15,13 @@ public class Department {
     public ArrayList<Employee> getEmployees() {
         return employees;
     }
-
+    public Boolean addEmployee(Employee newEmployee) {
+        this.employees.add(newEmployee);
+        return true;
+    }
+    public void removeEmployee(Employee employee) {
+        this.employees.remove(employee);
+    }
     public void setEmployees(ArrayList<Employee> employees) {
         this.employees = employees;
     }
