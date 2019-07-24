@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f373efb5-9562-43f1-950f-c22bbea1adb5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/myapp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/myapp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercises/bus_management.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../excercises/bus_management.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercises/~$s_management.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../excercises/~$s_management.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercises/~$s_ticket_management.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercises/~$ployee_department.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercises/~$structor_salary.docx" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,6 +91,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,7 +119,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,7 +178,7 @@
     <frame x="0" y="23" width="2560" height="1376" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15091342" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15210484" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -215,17 +213,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/myapp/Calculation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/Float.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-804">
@@ -259,6 +246,17 @@
             <element signature="e#1237#1238#0" expanded="true" />
             <element signature="e#1287#1288#0" expanded="true" />
             <element signature="e#1329#1330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myapp/Calculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
           </folding>
         </state>
       </provider>
