@@ -52,13 +52,16 @@ public class Main {
         msAnna.setYearsOfService(6);
         //Project projectA = new Project("Project A", 11000000.0);
         Project projectA = Project.input();
-        if(projectA.addEmployee(mrHoang)) {
-           mrHoang.setProject(projectA);
-            System.out.println("Add successfully");
-        } else {
-            System.out.println("CAnnnot add mr Hoang");
+        if(projectA != null) {
+            if(projectA.addEmployee(mrHoang)) {
+                mrHoang.setProject(projectA);
+                System.out.println("Add successfully");
+            } else {
+                System.out.println("CAnnnot add mr Hoang");
+            }
+            System.out.println("Number of employees = "
+                    +Employee.numberOfEmployees);
         }
-        System.out.println("Number of employees = "+Employee.numberOfEmployees);
 
     }
 }

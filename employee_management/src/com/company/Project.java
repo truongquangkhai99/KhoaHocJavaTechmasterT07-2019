@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Project {
@@ -45,10 +46,19 @@ public class Project {
     }
     public static Project input() {
         //Factory method
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter project's name:");
-        String projectName = scanner.nextLine();
-        Double bugget = scanner.nextDouble();
-        return new Project(projectName, bugget);
+        try {
+            Scanner scanner = new Scanner(System.in);
+            scanner = null;
+            System.out.println("Enter project's name:");
+            String projectName = scanner.nextLine();
+            System.out.println("Enter project's budget:");
+            Double bugget = scanner.nextDouble();
+            return new Project(projectName, bugget);
+        }catch (Exception e) {
+            System.out.println("Cannot create project. Error:"
+                        +e.toString());
+            return null;
+        }
+
     }
 }
