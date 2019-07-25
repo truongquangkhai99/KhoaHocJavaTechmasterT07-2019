@@ -2,7 +2,7 @@ package com.company;
 
 public class Step5 extends Step1 {
     @Override
-    public int getNext(Character c) {
-        return c.equals("G") ? 6 : c.equals(" ") ? 5 : 2;
+    public int getNext(char c) {
+        return c == 'G' ? 6 : c == ' ' ? 5 : 2;
     }
 }
