@@ -5,7 +5,7 @@ public class Dice {
     private Integer diceId;
     public Integer getMarks() {
         //Quan xuc sac 6 mat 1 -> 6
-        return Helper.getRandomNumber(5) + 1;
+        return Helper.getRandomNumber(6) + 1;
     }
 
     public Dice(Integer diceId) {

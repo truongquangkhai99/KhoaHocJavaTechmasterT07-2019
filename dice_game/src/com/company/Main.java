@@ -46,7 +46,8 @@ public class Main {
         player3.setDices(dices);
         player4.setDices(dices);
 
-        supervisor.playGame();
+        //supervisor.playGame();
+        supervisor.playMatches(100000);
 
     }
 }

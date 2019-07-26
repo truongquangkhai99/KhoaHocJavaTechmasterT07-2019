@@ -28,6 +28,38 @@ public class Player {
         return dices;
     }
 
+    public Integer getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(Integer playerId) {
+        this.playerId = playerId;
+    }
+
+    public PlayerType getPlayerType() {
+        return playerType;
+    }
+
+    public void setPlayerType(PlayerType playerType) {
+        this.playerType = playerType;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getMarks() {
+        return marks;
+    }
+
+    public void setMarks(Integer marks) {
+        this.marks = marks;
+    }
+
     public void setDices(ArrayList<Dice> dices) {
         this.dices = dices;
     }
@@ -54,17 +86,22 @@ public class Player {
         Dice dice = dices.get(randomIndex);
         //2. Giao quân xúc săc vừa chọn
         Integer marks = dice.getMarks();
+        System.out.println("Dice "+dice.toString()+" is playing");
         marks = marks + this.marks;
         if(marks == 21) {
             this.marks = marks;
+            System.out.println(name+" has "+marks+" marks");
             return true;
         } else if(marks > 21) {
             this.marks = 0;
+            System.out.println(name+" has "+marks+" marks");
             return false;
         } else if(marks < 21) {
             this.marks = marks;
+            System.out.println(name+" has "+marks+" marks");
             return false;
         }
+        System.out.println(name+" has "+marks+" marks");
         return false;
     }
 
