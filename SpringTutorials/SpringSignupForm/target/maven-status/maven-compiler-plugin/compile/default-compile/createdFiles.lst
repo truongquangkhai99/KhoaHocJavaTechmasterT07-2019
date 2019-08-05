@@ -1,0 +1,4 @@
+com/signupform/config/AppConfig.class
+com/signupform/controller/SignUpController.class
+com/signupform/model/SignUpForm.class
+com/signupform/config/SpringMvcDispatcherServletInitializer.class
