@@ -1,0 +1,4 @@
+com/springmvc5example/config/SpringMvcDispatcherServletInitializer.class
+com/springmvc5example/controller/HelloWorldController.class
+com/springmvc5example/config/AppConfig.class
+com/springmvc5example/model/HelloWorld.class
