@@ -1,23 +1,28 @@
 package models;
 
 import java.io.Serializable;
+import java.time.Clock;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoField;
 
 public class Department implements Serializable {
-    private Integer id;
+    private long id;
     private String name;
     private String description;
+    public static int numberOfObjects = 0;
 
-    public Department(Integer id, String name, String description) {
-        this.id = id;
+    public Department(String name, String description) {
         this.name = name;
         this.description = description;
+        numberOfObjects++;
+        this.id = numberOfObjects;//auto increament
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -35,5 +40,12 @@ public class Department implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public static long randomId() {
+        long xx = System.nanoTime();
+        //Integer result = (int)(Math.random() * 500 + 1);
+        return System.nanoTime();
+
     }
 }

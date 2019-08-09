@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import models.Department;
 
 import java.util.Observable;
@@ -27,10 +28,15 @@ public class DepartmentsStage extends Stage implements IMyStage{
     private TableColumn columnDepartmentId = new TableColumn("ID");
     private TableColumn columnDepartmentName = new TableColumn("Tên phòng");
     private TableColumn columnDepartmentDescription = new TableColumn("Mô tả");
+
+    private ContextMenu contextMenu = new ContextMenu();
+    private MenuItem menuItemAdd = new MenuItem("Add");
+    private MenuItem menuItemProperties = new MenuItem("Properties");
+
     private ObservableList<Department> departments
             = FXCollections.observableArrayList(
-                    new Department(1, "IT", "Phong ID day"),
-                    new Department(2, "Sales", "Phong ban hang")
+                    new Department("IT", "Phong ID day"),
+                    new Department("Sales", "Phong ban hang")
     );
 
     private Button btnInsertDepartment = new Button("Add new Department");
@@ -55,8 +61,8 @@ public class DepartmentsStage extends Stage implements IMyStage{
                 columnDepartmentName, columnDepartmentDescription);
         tableView.setItems(departments);
 
-        columnDepartmentId.setMinWidth(20);
-        columnDepartmentId.setStyle( "-fx-alignment: CENTER;");
+        columnDepartmentId.setMinWidth(150);
+        columnDepartmentId.setStyle( "-fx-alignment: CENTER-LEFT;");
         columnDepartmentId.setCellValueFactory(new PropertyValueFactory<>("id"));
 
         columnDepartmentName.setMinWidth(100);
@@ -65,7 +71,10 @@ public class DepartmentsStage extends Stage implements IMyStage{
 
         columnDepartmentDescription.setMinWidth(200);
         columnDepartmentDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
-
+        this.setOnHiding(event -> {
+            this.editDepartmentStage.close();
+            this.editDepartmentStage = null;
+        });
         tableView.setRowFactory(tv ->{
             final TableRow<Department> row = new TableRow<Department>();
             row.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -90,5 +99,21 @@ public class DepartmentsStage extends Stage implements IMyStage{
                 editDepartmentStage.show();
             }
         });
+        contextMenu.getItems().addAll(menuItemAdd, menuItemProperties);
     }
+    public boolean insertDepartment(Department newDepartment) {
+        //check identity, identity constraints...
+        for(Department department: departments) {
+            if(department.getName().equals(newDepartment.getName())){
+                return false;
+            }
+        }
+        this.departments.add(newDepartment);
+        //reload tableview.
+        tableView.refresh();
+        this.editDepartmentStage.close();
+        this.editDepartmentStage = null;
+        return true;
+    }
+
 }

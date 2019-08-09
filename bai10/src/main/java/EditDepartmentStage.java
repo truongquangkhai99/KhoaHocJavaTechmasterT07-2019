@@ -1,10 +1,14 @@
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import models.Department;
 
 public class EditDepartmentStage extends Stage implements IMyStage{
     private DepartmentsStage departmentsStage;
@@ -16,7 +20,7 @@ public class EditDepartmentStage extends Stage implements IMyStage{
     private TextField txtName = new TextField();
     private Label lblDescription = new Label("Description:");
     private TextField txtDescription = new TextField();
-    private Button btnSave = new Button("Save");
+    private Button btnSave = new Button("Add");
     private Button btnCancel = new Button("Cancel");
 
     EditDepartmentStage(DepartmentsStage departmentsStage) {
@@ -38,6 +42,35 @@ public class EditDepartmentStage extends Stage implements IMyStage{
         gridPane.add(txtDescription, 1,2);
         gridPane.add(btnSave, 0,3);
         gridPane.add(btnCancel, 1,3);
+        btnSave.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                String departmentName = txtName.getText().trim();
+                String description = txtDescription.getText().trim();
+                if(departmentName.length() < 3 || description.length() < 3) {
+                    //validate
+                    MyAlert.showAlert(Alert.AlertType.ERROR,
+                            "Incorrect input",
+                            "Name or description must be >= 3 characters");
 
+                    return;
+                }
+                Department newDepartment = new Department(departmentName, description);
+                newDepartment.setId(Department.randomId());
+
+                if(departmentsStage.insertDepartment(newDepartment) == false) {
+                    MyAlert.showAlert(Alert.AlertType.ERROR,
+                            "Incorrect input",
+                            "Cannot insert new department with the same name !");
+                    return;
+                }
+            }
+        });
+        btnCancel.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                EditDepartmentStage.this.close();
+            }
+        });
     }
 }
