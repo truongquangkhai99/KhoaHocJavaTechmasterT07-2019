@@ -7,6 +7,13 @@ CREATE TABLE tblDepartment(
     description TEXT,
     PRIMARY KEY (departmentId)
 );
+INSERT INTO tblDepartment(name, description)
+VALUES('IT', "This is IT Department");
+
+INSERT INTO tblDepartment(name, description)
+VALUES('Sales', "Day la phong Sales");
+
+SELECT * FROM tblDepartment;
 
 CREATE TABLE tblEmployee(
     employeeId INT AUTO_INCREMENT,
