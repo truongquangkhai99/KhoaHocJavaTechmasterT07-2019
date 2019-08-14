@@ -31,6 +31,7 @@ public class DepartmentsStage extends Stage implements IMyStage{
 
     private ContextMenu contextMenu = new ContextMenu();
     private MenuItem menuItemAdd = new MenuItem("Add");
+    private MenuItem menuItemDelete = new MenuItem("Delete");
     private MenuItem menuItemProperties = new MenuItem("Properties");
 
     private ObservableList<Department> departments
@@ -85,10 +86,20 @@ public class DepartmentsStage extends Stage implements IMyStage{
                         System.out.println("double click");
                     } else if(event.getButton() == MouseButton.SECONDARY) {
                         System.out.println("right click");
+                        contextMenu.show(tableView, event.getScreenX(), event.getScreenY());
                     }
                 }
             });
             return row;
+        });
+        menuItemAdd.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (editDepartmentStage == null) {
+                    editDepartmentStage = new EditDepartmentStage(DepartmentsStage.this);
+                }
+                editDepartmentStage.show();
+            }
         });
         btnInsertDepartment.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -99,7 +110,7 @@ public class DepartmentsStage extends Stage implements IMyStage{
                 editDepartmentStage.show();
             }
         });
-        contextMenu.getItems().addAll(menuItemAdd, menuItemProperties);
+        contextMenu.getItems().addAll(menuItemAdd, menuItemDelete, menuItemProperties);
     }
     public boolean insertDepartment(Department newDepartment) {
         //check identity, identity constraints...
@@ -117,3 +128,4 @@ public class DepartmentsStage extends Stage implements IMyStage{
     }
 
 }
+
