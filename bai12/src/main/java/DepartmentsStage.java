@@ -46,6 +46,7 @@ public class DepartmentsStage extends Stage implements IMyStage{
     private LoginStage loginStage;//relation
     DepartmentsStage(LoginStage loginStage) {
         this.loginStage = loginStage;
+        Database.getInstance();
         setupUI();
     }
 
