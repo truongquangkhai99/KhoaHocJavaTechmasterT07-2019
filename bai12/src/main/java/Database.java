@@ -1,7 +1,10 @@
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import models.Department;
+
+import java.sql.*;
 import java.util.Properties;
 
 public class Database {
@@ -36,5 +39,23 @@ public class Database {
             instance = new Database();
         }
         return instance;
+    }
+    public ObservableList<Department> getDepartments() {
+        ObservableList<Department> departments = FXCollections.observableArrayList();
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM tblDepartment");
+            while (resultSet.next()) {
+                Long departmentId = resultSet.getLong("departmentId");
+                String name = resultSet.getString("name");
+                String description = resultSet.getString("description");
+                departments.add(new Department(departmentId, name, description));
+            }
+
+        } catch(SQLException e) {
+
+        } finally {
+            return departments;
+        }
     }
 }

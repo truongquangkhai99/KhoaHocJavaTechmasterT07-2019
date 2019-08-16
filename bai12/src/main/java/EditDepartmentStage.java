@@ -55,15 +55,7 @@ public class EditDepartmentStage extends Stage implements IMyStage{
 
                     return;
                 }
-                Department newDepartment = new Department(departmentName, description);
-                newDepartment.setId(Department.randomId());
-
-                if(departmentsStage.insertDepartment(newDepartment) == false) {
-                    MyAlert.showAlert(Alert.AlertType.ERROR,
-                            "Incorrect input",
-                            "Cannot insert new department with the same name !");
-                    return;
-                }
+                //insert
             }
         });
         btnCancel.setOnAction(new EventHandler<ActionEvent>() {

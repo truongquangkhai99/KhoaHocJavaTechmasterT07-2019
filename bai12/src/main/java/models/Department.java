@@ -11,11 +11,12 @@ public class Department implements Serializable {
     private String description;
     public static int numberOfObjects = 0;
 
-    public Department(String name, String description) {
+    public Department(Long id, String name, String description) {
         this.name = name;
         this.description = description;
         numberOfObjects++;
-        this.id = numberOfObjects;//auto increament
+        //this.id = numberOfObjects;//auto increament
+        this.id = id;
     }
 
     public long getId() {

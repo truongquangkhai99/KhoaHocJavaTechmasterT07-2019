@@ -35,10 +35,7 @@ public class DepartmentsStage extends Stage implements IMyStage{
     private MenuItem menuItemProperties = new MenuItem("Properties");
 
     private ObservableList<Department> departments
-            = FXCollections.observableArrayList(
-                    new Department("IT", "Phong ID day"),
-                    new Department("Sales", "Phong ban hang")
-    );
+            = FXCollections.observableArrayList();
 
     private Button btnInsertDepartment = new Button("Add new Department");
 
@@ -46,7 +43,7 @@ public class DepartmentsStage extends Stage implements IMyStage{
     private LoginStage loginStage;//relation
     DepartmentsStage(LoginStage loginStage) {
         this.loginStage = loginStage;
-        Database.getInstance();
+        departments = Database.getInstance().getDepartments();
         setupUI();
     }
 
