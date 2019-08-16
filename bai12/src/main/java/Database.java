@@ -58,4 +58,17 @@ public class Database {
             return departments;
         }
     }
+    public void insertDepartment(String name, String description) {
+        try {
+            String sqlCommand = "INSERT INTO tblDepartment(name, description) VALUES(?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlCommand,
+                    Statement.RETURN_GENERATED_KEYS);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, description);
+            preparedStatement.executeUpdate();
+            System.out.println("Insert to DB successfully");
+        }catch (Exception e) {
+            System.out.println("Cannot insert data to DB. Error:"+e.toString());
+        }
+    }
 }

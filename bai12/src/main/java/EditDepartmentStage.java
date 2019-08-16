@@ -56,6 +56,9 @@ public class EditDepartmentStage extends Stage implements IMyStage{
                     return;
                 }
                 //insert
+                Database.getInstance().insertDepartment(departmentName, description);
+                departmentsStage.reloadData();
+
             }
         });
         btnCancel.setOnAction(new EventHandler<ActionEvent>() {

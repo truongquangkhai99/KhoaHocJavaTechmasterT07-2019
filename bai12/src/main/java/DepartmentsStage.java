@@ -124,6 +124,12 @@ public class DepartmentsStage extends Stage implements IMyStage{
         this.editDepartmentStage = null;
         return true;
     }
-
+    public void reloadData(){
+        departments = Database.getInstance().getDepartments();
+        tableView.setItems(departments);
+        tableView.refresh();
+        this.editDepartmentStage.close();
+        this.editDepartmentStage = null;
+    }
 }
 
